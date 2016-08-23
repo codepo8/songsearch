@@ -1,6 +1,6 @@
 body {
   padding: .5em;
-  font-size: calc(1em + 1vh);
+  font-size: calc(1em + 1vw);
   font-family: Arial, Helvetica, sans-serif;
 }
 #load {
