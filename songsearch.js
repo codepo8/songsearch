@@ -90,6 +90,6 @@ function ajaxfetch(url){
   request.setRequestHeader('If-Modified-Since','Wed, 05 Apr 2006 00:00:00 GMT');
   request.send(null);
 }
-var data = ajaxfetch('songs.csv');
+var data = ajaxfetch('/songsearch/songs.csv');
 
 })();
