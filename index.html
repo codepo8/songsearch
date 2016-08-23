@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Song search…</title>
+  <link rel="stylesheet" type="text/css" href="songsearch.css">
+</head>
+<body>
+<div id="load">Loading song data (4MB), please wait…</div>
+<form>
+    <label>Song Search<input id="s" required></label>
+    <input type="submit" value="find my tune!">
+    <div>
+    <label><input type="radio" name="what" value="0">Only search Artist</label>
+    <label><input type="radio" name="what" value="1">Only search Song</label>
+    <label><input type="radio" name="what" value ="2" checked>Search both</label>
+    </div>
+</form>
+<table></table>
+<script src="songsearchworker.js"></script>
+<script src="songsearch.js"></script>
+</body>
+</html>
