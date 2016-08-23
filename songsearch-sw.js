@@ -1,6 +1,6 @@
 self.addEventListener('install', e => {
   e.waitUntil(
-    caches.open('csscolourgame-v8').then(cache => {
+    caches.open('songsearch-v2').then(cache => {
       return cache.addAll([
         '/songsearch/index.html',
         '/songsearch/songsearch.css',
@@ -15,7 +15,7 @@ self.addEventListener('install', e => {
  
 self.addEventListener('activate', function(event) {
 
-  var cacheWhitelist = ['songsearch-v1'];
+  var cacheWhitelist = ['songsearch-v2'];
 
   event.waitUntil(
     caches.keys().then(function(cacheNames) {
