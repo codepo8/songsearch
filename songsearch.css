@@ -21,8 +21,14 @@ body {
   display: block;
 }
 form {
-  background: #ccc;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: calc(100% - 20px);
+  background: #c7ffb6;
   padding: 10px;
+  box-shadow: 5px 0 10px #333;
   margin-bottom: 10px;
 }
 tr {
@@ -49,6 +55,7 @@ table {
   border: none;
   width: 100%;
   font-size: 70%;
+  margin-top: 15vh;
   border-collapse: collapse;
 }
 td, th {

@@ -1,4 +1,7 @@
+(function(){
+
 var songs;
+
 function init(dataset) {
     document.body.classList.add('loaded');
     document.querySelector('#load').innerHTML = 'Searching please wait…';
@@ -88,3 +91,5 @@ function ajaxfetch(url){
   request.send(null);
 }
 var data = ajaxfetch('songs.csv');
+
+})();
