@@ -1,0 +1,14 @@
+{
+  "name": "Songsearch",
+  "short_name": "Songsearch",
+  "icons": [{
+        "src": "256x256.png",
+        "type": "image/png",
+        "sizes": "256x256"
+      }],
+  "start_url": "/songsearch/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#000000",
+  "theme_color": "#000000"
+}

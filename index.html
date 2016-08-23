@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Song search…</title>
   <link rel="stylesheet" type="text/css" href="songsearch.css">
+  <link rel="manifest" href="manifest.json">
 </head>
 <body>
 <div id="load">Loading song data (3.5MB), please wait…</div>
@@ -20,5 +21,16 @@
 <table></table>
 <script src="songsearchworker.js"></script>
 <script src="songsearch.js"></script>
+<script>
+if('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/songsearch/songsearch-sw.js', { scope: '/songsearch/' })
+    .then(function(registration) {
+      console.log('Service Worker Registered');
+    });
+  navigator.serviceWorker.ready.then(function(registration) {
+      console.log('Service Worker Ready');
+  });
+}
+</script>
 </body>
 </html>
