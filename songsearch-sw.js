@@ -1,7 +1,8 @@
 self.addEventListener('install', e => {
   e.waitUntil(
-    caches.open('songsearch-v2').then(cache => {
+    caches.open('songsearch-v3').then(cache => {
       return cache.addAll([
+        '/songsearch/',
         '/songsearch/index.html',
         '/songsearch/songsearch.css',
         '/songsearch/songs.csv',
@@ -15,7 +16,7 @@ self.addEventListener('install', e => {
  
 self.addEventListener('activate', function(event) {
 
-  var cacheWhitelist = ['songsearch-v2'];
+  var cacheWhitelist = ['songsearch-v3'];
 
   event.waitUntil(
     caches.keys().then(function(cacheNames) {
