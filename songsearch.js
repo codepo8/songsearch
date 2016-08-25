@@ -93,3 +93,13 @@ function ajaxfetch(url){
 var data = ajaxfetch('/songsearch/songs.csv');
 
 })();
+
+if('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/songsearch/songsearch-sw.js', { scope: '/songsearch/' })
+    .then(function(registration) {
+      console.log('Service Worker Registered');
+    });
+  navigator.serviceWorker.ready.then(function(registration) {
+      console.log('Service Worker Ready');
+  });
+}
