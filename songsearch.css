@@ -1,7 +1,8 @@
 body {
-  padding: .5em;
+  padding: 10px;
   font-size: calc(1em + 1vw);
   font-family: Arial, Helvetica, sans-serif;
+  background: #333;
 }
 #load {
   position: absolute;
@@ -22,14 +23,21 @@ body {
   display: block;
 }
 form {
+  background-image: linear-gradient(#111, #000), url(256x256.png) left center no-repeat #111;
+
+  background-image: url(256x256.png), 
+  linear-gradient(to bottom, #101010, #1d1d1d);
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100px, auto;
+  background-position: top left, top;
   position: fixed;
   z-index: 2;
   top: 0;
   left: 0;
-  width: calc(100% - 20px);
-  background: #c7ffb6;
+  width: calc(100% - 140px);
   padding: 10px;
-  box-shadow: 5px 0 10px #333;
+  color: #eee;
+  padding-left: 120px;
   margin-bottom: 10px;
 }
 tr {
@@ -55,8 +63,10 @@ tr:nth-child(even) {
 table {
   border: none;
   width: 100%;
+  margin: 0;
+  padding: 0;
   font-size: 70%;
-  margin-top: 15vh;
+  margin-top: 17vh;
   border-collapse: collapse;
 }
 td, th {
